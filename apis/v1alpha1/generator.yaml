@@ -50,6 +50,10 @@ resources:
           input_fields:
             GroupName: Name
     fields:
+      GroupID:
+        print:
+          path: Status.groupID
+          name: ID
       Path:
         late_initialize: {}
       # In order to support attaching zero or more policies to a role, we use
@@ -111,6 +115,10 @@ resources:
         late_initialize: {}
       Path:
         late_initialize: {}
+      PolicyID:
+        print:
+          path: Status.policyID
+          name: ID
       Tags:
         compare:
           is_ignored: true
@@ -158,6 +166,10 @@ resources:
       # calls to manage the set of PolicyARNs attached to this Role.
       Policies:
         type: "[]*string"
+      RoleID:
+        print:
+          path: Status.roleID
+          name: ID
       Tags:
         compare:
           is_ignored: true

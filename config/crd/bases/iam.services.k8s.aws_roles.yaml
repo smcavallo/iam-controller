@@ -15,7 +15,11 @@ spec:
     singular: role
   scope: Namespaced
   versions:
-  - name: v1alpha1
+  - additionalPrinterColumns:
+    - jsonPath: .status.roleID
+      name: ID
+      type: string
+    name: v1alpha1
     schema:
       openAPIV3Schema:
         description: Role is the Schema for the Roles API

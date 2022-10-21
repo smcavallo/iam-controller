@@ -15,7 +15,11 @@ spec:
     singular: policy
   scope: Namespaced
   versions:
-  - name: v1alpha1
+  - additionalPrinterColumns:
+    - jsonPath: .status.policyID
+      name: ID
+      type: string
+    name: v1alpha1
     schema:
       openAPIV3Schema:
         description: Policy is the Schema for the Policies API
